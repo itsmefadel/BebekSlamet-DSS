@@ -10,33 +10,33 @@
         <form autocomplete="off" method="post" enctype="multipart/form-data">
         <h1>Tentukan Prioritas Kriteria</h1>
             
-        <h2>Antara Rating Novel dengan Penghargaan</h2>
-        <h3 id="kataSlider1">Rating Novel <span style='color:blue'>sama penting</span> dengan Penghargaan</h3>
+        <h2>Antara Harga dengan Ketersediaan</h2>
+        <h3 id="kataSlider1">Harga <span style='color:blue'>sama penting</span> dengan Ketersediaan</h3>
         <input id="slider1" name="inputJudulSkenario" type="range" value="8" min="0" max="16" class="slider" onmousemove="prosesSlider1(this.value)" onChange="prosesSlider1(this.value)">
         <span id="nilaiSlider1">1</span>
         
-        <h2>Antara Rating Novel dengan Popularitas Penulis</h2>
-            <h3 id="kataSlider2">Rating Novel <span style='color:blue'>sama penting</span> dengan Popularitas Penulis</h3>
+        <h2>Antara Harga dengan Ketepatan Pengiriman</h2>
+            <h3 id="kataSlider2">Harga <span style='color:blue'>sama penting</span> dengan Ketepatan Pengiriman</h3>
         <input id="slider2" name="inputJudulSkenario" type="range" value="8" min="0" max="16" class="slider" onmousemove="prosesSlider2(this.value,2)" onChange="prosesSlider2(this.value,2)">
         <span id="nilaiSlider2">1</span>
         
-        <h2>Antara Rating Novel dengan Rating Penulis</h2>
-            <h3 id="kataSlider3">Rating Novel <span style='color:blue'>sama penting</span> dengan Rating Penulis</h3>
+        <h2>Antara Harga dengan Kualitas</h2>
+            <h3 id="kataSlider3">Harga <span style='color:blue'>sama penting</span> dengan Kualitas</h3>
         <input id="slider3" name="inputJudulSkenario" type="range" value="8" min="0" max="16" class="slider" onmousemove="prosesSlider3(this.value,3)" onChange="prosesSlider3(this.value,3)">
         <span id="nilaiSlider3">1</span>
             
-        <h2>Antara Penghargaan dengan Popularitas Penulis</h2>
-            <h3 id="kataSlider4">Penghargaan <span style='color:blue'>sama penting</span> dengan Popularitas Penulis</h3>
+        <h2>Antara Ketersediaan dengan Ketepatan Pengiriman</h2>
+            <h3 id="kataSlider4">Ketersediaan <span style='color:blue'>sama penting</span> dengan Ketepatan Pengiriman</h3>
         <input id="slider4" name="inputJudulSkenario" type="range" value="8" min="0" max="16" class="slider" onmousemove="prosesSlider4(this.value,4)" onChange="prosesSlider4(this.value,4)">
         <span id="nilaiSlider4">1</span>
             
-        <h2>Antara Penghargaan dengan Rating Penulis</h2>
-            <h3 id="kataSlider5">Penghargaan <span style='color:blue'>sama penting</span> dengan Rating Penulis</h3>
+        <h2>Antara Ketersediaan dengan Kualitas</h2>
+            <h3 id="kataSlider5">Ketersediaan <span style='color:blue'>sama penting</span> dengan Kualitas</h3>
         <input id="slider5" name="inputJudulSkenario" type="range" value="8" min="0" max="16" class="slider" onmousemove="prosesSlider5(this.value,5)" onChange="prosesSlider5(this.value,5)">
         <span id="nilaiSlider5">1</span>
             
-        <h2>Antara Popularitas Penulis dengan Rating Penulis</h2>
-            <h3 id="kataSlider6">Popularitas Penulis <span style='color:blue'>sama penting</span> dengan Rating Penulis</h3>
+        <h2>Antara Ketepatan Pengiriman dengan Kualitas</h2>
+            <h3 id="kataSlider6">Ketepatan Pengiriman <span style='color:blue'>sama penting</span> dengan Kualitas</h3>
         <input id="slider6" name="inputJudulSkenario" type="range" value="8" min="0" max="16" class="slider" onmousemove="prosesSlider6(this.value,6)" onChange="prosesSlider6(this.value,6)">
         <span id="nilaiSlider6">1</span>
         <p></p>
@@ -57,38 +57,38 @@
                 <table style="width:100%">
                     <tr>
                     <th></th>
-                    <th>Rating Novel</th>
-                    <th>Penghargaan</th>
-                    <th>Popularitas Penulis</th>
-                    <th>Rating Penulis</th>
+                    <th>Harga</th>
+                    <th>Ketersediaan</th>
+                    <th>Ketepatan Pengiriman</th>
+                    <th>Kualitas</th>
                     </tr>
                     <tr>
-                    <th>Rating Novel</th>
-                    <th bgcolor="yellow" id="barisRatingNovel1">1</th>
-                    <th id="barisRatingNovel2">1</th>
-                    <th id="barisRatingNovel3">1</th>
-                    <th id="barisRatingNovel4">1</th>
+                    <th>Harga</th>
+                    <th bgcolor="yellow" id="BarisHarga1">1</th>
+                    <th id="BarisHarga2">1</th>
+                    <th id="BarisHarga3">1</th>
+                    <th id="BarisHarga4">1</th>
                     </tr>
                     <tr>
-                    <th>Penghargaan</th>
-                    <th id="barisPenghargaan1">1</th>
-                    <th bgcolor="yellow" id="barisPenghargaan2">1</th>
-                    <th id="barisPenghargaan3">1</th>
-                    <th id="barisPenghargaan4">1</th>
+                    <th>Ketersediaan</th>
+                    <th id="BarisKetersediaan1">1</th>
+                    <th bgcolor="yellow" id="BarisKetersediaan2">1</th>
+                    <th id="BarisKetersediaan3">1</th>
+                    <th id="BarisKetersediaan4">1</th>
                     </tr>
                     <tr>
-                    <th>Popularitas Penulis</th>
-                    <th id="barisPopularitasPenulis1">1</th>
-                    <th id="barisPopularitasPenulis2">1</th>
-                    <th bgcolor="yellow" id="barisPopularitasPenulis3">1</th>
-                    <th id="barisPopularitasPenulis4">1</th>
+                    <th>Ketepatan Pengiriman</th>
+                    <th id="BarisKetepatanPengirimanPenulis1">1</th>
+                    <th id="BarisKetepatanPengirimanPenulis2">1</th>
+                    <th bgcolor="yellow" id="BarisKetepatanPengirimanPenulis3">1</th>
+                    <th id="BarisKetepatanPengirimanPenulis4">1</th>
                     </tr>
                     <tr>
-                    <th>Rating Penulis</th>
-                    <th id="barisRatingPenulis1">1</th>
-                    <th id="barisRatingPenulis2">1</th>
-                    <th id="barisRatingPenulis3">1</th>
-                    <th bgcolor="yellow" id="barisRatingPenulis4">1</th>
+                    <th>Kualitas</th>
+                    <th id="BarisKualitas1">1</th>
+                    <th id="BarisKualitas2">1</th>
+                    <th id="BarisKualitas3">1</th>
+                    <th bgcolor="yellow" id="BarisKualitas4">1</th>
                     </tr>
                     <tr>
                     <th>Jumlah Kolom</th>
@@ -105,48 +105,48 @@
                 <table style="width:100%">
                     <tr>
                     <th></th>
-                    <th>Rating Novel</th>
-                    <th>Penghargaan</th>
-                    <th>Popularitas Penulis</th>
-                    <th>Rating Penulis</th>
+                    <th>Harga</th>
+                    <th>Ketersediaan</th>
+                    <th>Ketepatan Pengiriman</th>
+                    <th>Kualitas</th>
                     <th>Jumlah Baris</th>
                     <th>Prioritas Relatif Kriteria</th>
                     </tr>
                     <tr>
-                    <th>Rating Novel</th>
-                    <th id="barisNormRatingNovel1">1</th>
-                    <th id="barisNormRatingNovel2">1</th>
-                    <th id="barisNormRatingNovel3">1</th>
-                    <th id="barisNormRatingNovel4">1</th>
-                    <th id="barisNormRatingNovel5">4</th>
-                    <th id="barisNormRatingNovel6">1</th>
+                    <th>Harga</th>
+                    <th id="barisNormHarga1">1</th>
+                    <th id="barisNormHarga2">1</th>
+                    <th id="barisNormHarga3">1</th>
+                    <th id="barisNormHarga4">1</th>
+                    <th id="barisNormHarga5">4</th>
+                    <th id="barisNormHarga6">1</th>
                     </tr>
                     <tr>
-                    <th>Penghargaan</th>
-                    <th id="barisNormPenghargaan1">1</th>
-                    <th id="barisNormPenghargaan2">1</th>
-                    <th id="barisNormPenghargaan3">1</th>
-                    <th id="barisNormPenghargaan4">1</th>
-                    <th id="barisNormPenghargaan5">4</th>
-                    <th id="barisNormPenghargaan6">1</th>
+                    <th>Ketersediaan</th>
+                    <th id="barisNormKetersediaan1">1</th>
+                    <th id="barisNormKetersediaan2">1</th>
+                    <th id="barisNormKetersediaan3">1</th>
+                    <th id="barisNormKetersediaan4">1</th>
+                    <th id="barisNormKetersediaan5">4</th>
+                    <th id="barisNormKetersediaan6">1</th>
                     </tr>
                     <tr>
-                    <th>Popularitas Penulis</th>
-                    <th id="barisNormPopularitas1">1</th>
-                    <th id="barisNormPopularitas2">1</th>
-                    <th id="barisNormPopularitas3">1</th>
-                    <th id="barisNormPopularitas4">1</th>
-                    <th id="barisNormPopularitas5">4</th>
-                    <th id="barisNormPopularitas6">1</th>
+                    <th>Ketepatan Pengiriman</th>
+                    <th id="barisNormKetepatanPengiriman1">1</th>
+                    <th id="barisNormKetepatanPengiriman2">1</th>
+                    <th id="barisNormKetepatanPengiriman3">1</th>
+                    <th id="barisNormKetepatanPengiriman4">1</th>
+                    <th id="barisNormKetepatanPengiriman5">4</th>
+                    <th id="barisNormKetepatanPengiriman6">1</th>
                     </tr>
                     <tr>
-                    <th>Rating Penulis</th>
-                    <th id="barisNormRatingPenulis1">1</th>
-                    <th id="barisNormRatingPenulis2">1</th>
-                    <th id="barisNormRatingPenulis3">1</th>
-                    <th id="barisNormRatingPenulis4">1</th>
-                        <th id="barisNormRatingPenulis5">4</th>
-                        <th id="barisNormRatingPenulis6">1</th>
+                    <th>Kualitas</th>
+                    <th id="barisNormKualitas1">1</th>
+                    <th id="barisNormKualitas2">1</th>
+                    <th id="barisNormKualitas3">1</th>
+                    <th id="barisNormKualitas4">1</th>
+                        <th id="barisNormKualitas5">4</th>
+                        <th id="barisNormKualitas6">1</th>
                     </tr>
                 </table>
                 <hr>
@@ -156,48 +156,48 @@
                 <table style="width:100%">
                     <tr>
                     <th></th>
-                    <th>Rating Novel</th>
-                    <th>Penghargaan</th>
-                    <th>Popularitas Penulis</th>
-                    <th>Rating Penulis</th>
+                    <th>Harga</th>
+                    <th>Ketersediaan</th>
+                    <th>Ketepatan Pengiriman</th>
+                    <th>Kualitas</th>
                     <th>Jumlah Baris</th>
                     <th>Sum / Relatif Kriteria</th>
                     </tr>
                     <tr>
-                    <th>Rating Novel</th>
-                    <th id="barisKonsRatingNovel1">1</th>
-                    <th id="barisKonsRatingNovel2">1</th>
-                    <th id="barisKonsRatingNovel3">1</th>
-                    <th id="barisKonsRatingNovel4">1</th>
-                    <th id="barisKonsRatingNovel5">4</th>
-                    <th id="barisKonsRatingNovel6">1</th>
+                    <th>Harga</th>
+                    <th id="barisKonsHarga1">1</th>
+                    <th id="barisKonsHarga2">1</th>
+                    <th id="barisKonsHarga3">1</th>
+                    <th id="barisKonsHarga4">1</th>
+                    <th id="barisKonsHarga5">4</th>
+                    <th id="barisKonsHarga6">1</th>
                     </tr>
                     <tr>
-                    <th>Penghargaan</th>
-                    <th id="barisKonsPenghargaan1">1</th>
-                    <th id="barisKonsPenghargaan2">1</th>
-                    <th id="barisKonsPenghargaan3">1</th>
-                    <th id="barisKonsPenghargaan4">1</th>
-                    <th id="barisKonsPenghargaan5">4</th>
-                    <th id="barisKonsPenghargaan6">1</th>
+                    <th>Ketersediaan</th>
+                    <th id="barisKonsKetersediaan1">1</th>
+                    <th id="barisKonsKetersediaan2">1</th>
+                    <th id="barisKonsKetersediaan3">1</th>
+                    <th id="barisKonsKetersediaan4">1</th>
+                    <th id="barisKonsKetersediaan5">4</th>
+                    <th id="barisKonsKetersediaan6">1</th>
                     </tr>
                     <tr>
-                    <th>Popularitas Penulis</th>
-                    <th id="barisKonsPopularitas1">1</th>
-                    <th id="barisKonsPopularitas2">1</th>
-                    <th id="barisKonsPopularitas3">1</th>
-                    <th id="barisKonsPopularitas4">1</th>
-                    <th id="barisKonsPopularitas5">4</th>
-                    <th id="barisKonsPopularitas6">1</th>
+                    <th>Ketepatan Pengiriman</th>
+                    <th id="barisKonsKetepatanPengiriman1">1</th>
+                    <th id="barisKonsKetepatanPengiriman2">1</th>
+                    <th id="barisKonsKetepatanPengiriman3">1</th>
+                    <th id="barisKonsKetepatanPengiriman4">1</th>
+                    <th id="barisKonsKetepatanPengiriman5">4</th>
+                    <th id="barisKonsKetepatanPengiriman6">1</th>
                     </tr>
                     <tr>
-                    <th>Rating Penulis</th>
-                    <th id="barisKonsRatingPenulis1">1</th>
-                    <th id="barisKonsRatingPenulis2">1</th>
-                    <th id="barisKonsRatingPenulis3">1</th>
-                    <th id="barisKonsRatingPenulis4">1</th>
-                        <th id="barisKonsRatingPenulis5">4</th>
-                        <th id="barisKonsRatingPenulis6">1</th>
+                    <th>Kualitas</th>
+                    <th id="barisKonsKualitas1">1</th>
+                    <th id="barisKonsKualitas2">1</th>
+                    <th id="barisKonsKualitas3">1</th>
+                    <th id="barisKonsKualitas4">1</th>
+                        <th id="barisKonsKualitas5">4</th>
+                        <th id="barisKonsKualitas6">1</th>
                     </tr>
                 </table>
                 <hr>
@@ -230,37 +230,16 @@
             <table id="tabelMatriksXBobot" style="width:100%"></table>
             <hr>
             </div>
-            <div id="matriksSR" >
-            <h2>Menghitung Nilai S dan R</h2>
-            <table id="tabelMatriksSR" style="width:100%"></table>
-            <hr>
-            <h2>Dengan nilai sensitifitas(V) =0.5</h2>
-            </div>
-            <div id="matriksIndexViqor" >
-            <h2>Index Viqor (Q)</h2>
-            <table id="tabelMatriksViqor" style="width:100%"></table>
+            <div id="matriksD" >
+            <h2>Menghitung Nilai D+ dan D-</h2>
+            <table id="tabelMatriksD" style="width:100%"></table>
             <hr>
             </div>
-            <div id="matriksIndexQ" >
-            <h2>Perankingan Berdasarkan Index Viqor (Q)</h2>
-            <table id="tabelMatriksQ" style="width:100%"></table>
+            <div id="matriksCci" >
+            <h2>Menghitung Nilai CCI</h2>
+            <table id="tabelMatriksCci" style="width:100%"></table>
             <hr>
             </div>
-            <div id="matriksIndex4" >
-            <h2>Perankingan Berdasarkan Index V=0.4 </h2>
-            <table id="tabelMatriks4" style="width:100%"></table>
-            <hr>
-            </div>
-            <div id="matriksIndex6" >
-            <h2>Perankingan Berdasarkan Index V=0.6 </h2>
-            <table id="tabelMatriks6" style="width:100%"></table>
-            <hr>
-            </div>
-            <div id="nilaiDq" >
-                <h2>Nilai DQ = 1/(n-1)  = <span id="dq" style='color:blue'></span></h2>
-            <hr>
-            </div>
-            <div id="nilaiAmA1" ></div>
             <p></p>
         </form>
         </div>

@@ -1,8 +1,8 @@
 // deklarasi matriks input pengguna
-var barisRatingNovel=new Array(1,1,1,1);
-var barisPenghargaan=new Array(1,1,1,1);
-var barisPopularitas=new Array(1,1,1,1);
-var barisRatingPenulis=new Array(1,1,1,1);
+var BarisHarga=new Array(1,1,1,1);
+var BarisKetersediaan=new Array(1,1,1,1);
+var BarisKetepatanPengiriman=new Array(1,1,1,1);
+var BarisKualitas=new Array(1,1,1,1);
 // deklarasi matriks prioritas relatif kriteria
 var prioritasRelatifKriteria=new Array(1,1,1,1);
 var el1,el2;
@@ -17,89 +17,90 @@ var iK4="antara "+iK3+"dan "+iK5;
 var iK6="antara "+iK5+"dan "+iK7;
 var iK8="antara "+iK7+"dan "+iK9;
 
+
 function prosesSlider1(value){
     var nilai;
     var stringPerbandingan;
-    el1="Rating Novel ";
-    el2="Penghargaan ";
+    el1="Harga ";
+    el2="Ketersediaan ";
     if(value==8){
         nilai=1;
         stringPerbandingan=el1+iK1+"dengan "+el2;
-        barisRatingNovel[1]=1;
-        barisPenghargaan[0]=1;
+        BarisHarga[1]=1;
+        BarisKetersediaan[0]=1;
     }else{
         if(value<8){
-            //lebih mementingkan rating novel
+            //lebih mementingkan Harga
         nilai=9-value;
         if(nilai==2){
             stringPerbandingan=el1+iK2+"daripada "+el2;
-            barisRatingNovel[1]=2;            
+            BarisHarga[1]=2;            
         }
             if(nilai==3){
-                barisRatingNovel[1]=3;
+                BarisHarga[1]=3;
             stringPerbandingan=el1+iK3+"daripada "+el2;
         }
             if(nilai==4){
-                barisRatingNovel[1]=4;
+                BarisHarga[1]=4;
             stringPerbandingan=el1+iK4+"daripada "+el2;
         }
             if(nilai==5){
-                barisRatingNovel[1]=5;
+                BarisHarga[1]=5;
             stringPerbandingan=el1+iK5+"daripada "+el2;
         }
             if(nilai==6){
-                barisRatingNovel[1]=6;
+                BarisHarga[1]=6;
             stringPerbandingan=el1+iK6+"daripada "+el2;
         }
             if(nilai==7){
-                barisRatingNovel[1]=7;
+                BarisHarga[1]=7;
             stringPerbandingan=el1+iK7+"daripada "+el2;
         }
             if(nilai==8){
-                barisRatingNovel[1]=8;
+                BarisHarga[1]=8;
             stringPerbandingan=el1+iK8+"daripada "+el2;
         }
             if(nilai==9){
-                barisRatingNovel[1]=9;
+                BarisHarga[1]=9;
             stringPerbandingan=el1+iK9+"daripada "+el2;
         }
-        barisPenghargaan[0]=barisRatingNovel[0]/barisRatingNovel[1];
+        BarisKetersediaan[0]=BarisHarga[0]/BarisHarga[1];
         }else{
-            //lebih mementingkan penghargaan
+            //lebih mementingkan Ketersediaan
         nilai=value-7;
             if(nilai==2){
-            barisPenghargaan[0]=2;
+            BarisKetersediaan[0]=2;
             stringPerbandingan=el2+iK2+"daripada "+el1;                
         }
             if(nilai==3){
-                barisPenghargaan[0]=3;
+                BarisKetersediaan[0]=3;
             stringPerbandingan=el2+iK3+"daripada "+el1;
         }
             if(nilai==4){
-                barisPenghargaan[0]=4;
+                BarisKetersediaan[0]=4;
             stringPerbandingan=el2+iK4+"daripada "+el1;
         }
             if(nilai==5){
-                barisPenghargaan[0]=5;
+                BarisKetersediaan[0]=5;
             stringPerbandingan=el2+iK5+"daripada "+el1;
         }
             if(nilai==6){
-                barisPenghargaan[0]=6;
+                BarisKetersediaan[0]=6;
             stringPerbandingan=el2+iK6+"daripada "+el1;
         }
             if(nilai==7){
-                barisPenghargaan[0]=7;
+                BarisKetersediaan[0]=7;
             stringPerbandingan=el2+iK7+"daripada "+el1;
         }
             if(nilai==8){
-                barisPenghargaan[0]=8;
+                BarisKetersediaan[0]=8;
             stringPerbandingan=el2+iK8+"daripada "+el1;
         }
             if(nilai==9){
-                barisPenghargaan[0]=9;
+                BarisKetersediaan[0]=9;
             stringPerbandingan=el2+iK9+"daripada "+el1;
         }
-      barisRatingNovel[1]=barisRatingNovel[0]/barisPenghargaan[0];
+      BarisHarga[1]=BarisHarga[0]/BarisKetersediaan[0];
         }
     }
     document.getElementById("nilaiSlider1").innerHTML=nilai.toString();
@@ -110,86 +111,86 @@ function prosesSlider1(value){
 function prosesSlider2(value){
     var nilai;
     var stringPerbandingan;
-    el1="Rating Novel ";
-    el2="Popularitas Penulis ";
+    el1="Harga ";
+    el2="Ketepatan Pengiriman ";
     if(value==8){
         nilai=1;
         stringPerbandingan=el1+iK1+"dengan "+el2;
-        barisRatingNovel[2]=1;
-        barisPopularitas[0]=1;
+        BarisHarga[2]=1;
+        BarisKetepatanPengiriman[0]=1;
     }else{
         if(value<8){
-            //lebih mementingkan rating novel
+            //lebih mementingkan Harga
         nilai=9-value;
         if(nilai==2){
             stringPerbandingan=el1+iK2+"daripada "+el2;
-            barisRatingNovel[2]=2;            
+            BarisHarga[2]=2;            
         }
             if(nilai==3){
-                barisRatingNovel[2]=3;
+                BarisHarga[2]=3;
             stringPerbandingan=el1+iK3+"daripada "+el2;
         }
             if(nilai==4){
-                barisRatingNovel[2]=4;
+                BarisHarga[2]=4;
             stringPerbandingan=el1+iK4+"daripada "+el2;
         }
             if(nilai==5){
-                barisRatingNovel[2]=5;
+                BarisHarga[2]=5;
             stringPerbandingan=el1+iK5+"daripada "+el2;
         }
             if(nilai==6){
-                barisRatingNovel[2]=6;
+                BarisHarga[2]=6;
             stringPerbandingan=el1+iK6+"daripada "+el2;
         }
             if(nilai==7){
-                barisRatingNovel[2]=7;
+                BarisHarga[2]=7;
             stringPerbandingan=el1+iK7+"daripada "+el2;
         }
             if(nilai==8){
-                barisRatingNovel[2]=8;
+                BarisHarga[2]=8;
             stringPerbandingan=el1+iK8+"daripada "+el2;
         }
             if(nilai==9){
-                barisRatingNovel[2]=9;
+                BarisHarga[2]=9;
             stringPerbandingan=el1+iK9+"daripada "+el2;
         }
-        barisPopularitas[0]=barisRatingNovel[0]/barisRatingNovel[2];
+        BarisKetepatanPengiriman[0]=BarisHarga[0]/BarisHarga[2];
         }else{
-            //lebih mementingkan popularitas penulis
+            //lebih mementingkan Ketepatan Pengiriman
         nilai=value-7;
             if(nilai==2){
-            barisPopularitas[0]=2;
+            BarisKetepatanPengiriman[0]=2;
             stringPerbandingan=el2+iK2+"daripada "+el1;                
         }
             if(nilai==3){
-                barisPopularitas[0]=3;
+                BarisKetepatanPengiriman[0]=3;
             stringPerbandingan=el2+iK3+"daripada "+el1;
         }
             if(nilai==4){
-                barisPopularitas[0]=4;
+                BarisKetepatanPengiriman[0]=4;
             stringPerbandingan=el2+iK4+"daripada "+el1;
         }
             if(nilai==5){
-                barisPopularitas[0]=5;
+                BarisKetepatanPengiriman[0]=5;
             stringPerbandingan=el2+iK5+"daripada "+el1;
         }
             if(nilai==6){
-                barisPopularitas[0]=6;
+                BarisKetepatanPengiriman[0]=6;
             stringPerbandingan=el2+iK6+"daripada "+el1;
         }
             if(nilai==7){
-                barisPopularitas[0]=7;
+                BarisKetepatanPengiriman[0]=7;
             stringPerbandingan=el2+iK7+"daripada "+el1;
         }
             if(nilai==8){
-                barisPopularitas[0]=8;
+                BarisKetepatanPengiriman[0]=8;
             stringPerbandingan=el2+iK8+"daripada "+el1;
         }
             if(nilai==9){
-                barisPopularitas[0]=9;
+                BarisKetepatanPengiriman[0]=9;
             stringPerbandingan=el2+iK9+"daripada "+el1;
         }
-      barisRatingNovel[2]=barisRatingNovel[0]/barisPopularitas[0];
+      BarisHarga[2]=BarisHarga[0]/BarisKetepatanPengiriman[0];
         }
     }
     document.getElementById("nilaiSlider2").innerHTML=nilai.toString();
@@ -200,86 +201,86 @@ function prosesSlider2(value){
 function prosesSlider3(value){
     var nilai;
     var stringPerbandingan;
-    el1="Rating Novel ";
-    el2="Rating Penulis ";
+    el1="Harga ";
+    el2="Kualitas ";
     if(value==8){
         nilai=1;
         stringPerbandingan=el1+iK1+"dengan "+el2;
-        barisRatingNovel[3]=1;
-        barisRatingPenulis[0]=1;
+        BarisHarga[3]=1;
+        BarisKualitas[0]=1;
     }else{
         if(value<8){
-            //lebih mementingkan rating novel
+            //lebih mementingkan Harga
         nilai=9-value;
         if(nilai==2){
             stringPerbandingan=el1+iK2+"daripada "+el2;
-            barisRatingNovel[3]=2;            
+            BarisHarga[3]=2;            
         }
             if(nilai==3){
-                barisRatingNovel[3]=3;
+                BarisHarga[3]=3;
             stringPerbandingan=el1+iK3+"daripada "+el2;
         }
             if(nilai==4){
-                barisRatingNovel[3]=4;
+                BarisHarga[3]=4;
             stringPerbandingan=el1+iK4+"daripada "+el2;
         }
             if(nilai==5){
-                barisRatingNovel[3]=5;
+                BarisHarga[3]=5;
             stringPerbandingan=el1+iK5+"daripada "+el2;
         }
             if(nilai==6){
-                barisRatingNovel[3]=6;
+                BarisHarga[3]=6;
             stringPerbandingan=el1+iK6+"daripada "+el2;
         }
             if(nilai==7){
-                barisRatingNovel[3]=7;
+                BarisHarga[3]=7;
             stringPerbandingan=el1+iK7+"daripada "+el2;
         }
             if(nilai==8){
-                barisRatingNovel[3]=8;
+                BarisHarga[3]=8;
             stringPerbandingan=el1+iK8+"daripada "+el2;
         }
             if(nilai==9){
-                barisRatingNovel[3]=9;
+                BarisHarga[3]=9;
             stringPerbandingan=el1+iK9+"daripada "+el2;
         }
-        barisRatingPenulis[0]=barisRatingNovel[0]/barisRatingNovel[3];
+        BarisKualitas[0]=BarisHarga[0]/BarisHarga[3];
         }else{
-            //lebih mementingkan popularitas penulis
+            //lebih mementingkan Ketepatan Pengiriman
         nilai=value-7;
             if(nilai==2){
-            barisRatingPenulis[0]=2;
+            BarisKualitas[0]=2;
             stringPerbandingan=el2+iK2+"daripada "+el1;                
         }
             if(nilai==3){
-                barisRatingPenulis[0]=3;
+                BarisKualitas[0]=3;
             stringPerbandingan=el2+iK3+"daripada "+el1;
         }
             if(nilai==4){
-                barisRatingPenulis[0]=4;
+                BarisKualitas[0]=4;
             stringPerbandingan=el2+iK4+"daripada "+el1;
         }
             if(nilai==5){
-                barisRatingPenulis[0]=5;
+                BarisKualitas[0]=5;
             stringPerbandingan=el2+iK5+"daripada "+el1;
         }
             if(nilai==6){
-                barisRatingPenulis[0]=6;
+                BarisKualitas[0]=6;
             stringPerbandingan=el2+iK6+"daripada "+el1;
         }
             if(nilai==7){
-                barisRatingPenulis[0]=7;
+                BarisKualitas[0]=7;
             stringPerbandingan=el2+iK7+"daripada "+el1;
         }
             if(nilai==8){
-                barisRatingPenulis[0]=8;
+                BarisKualitas[0]=8;
             stringPerbandingan=el2+iK8+"daripada "+el1;
         }
             if(nilai==9){
-                barisRatingPenulis[0]=9;
+                BarisKualitas[0]=9;
             stringPerbandingan=el2+iK9+"daripada "+el1;
         }
-      barisRatingNovel[3]=barisRatingNovel[0]/barisRatingPenulis[0];
+      BarisHarga[3]=BarisHarga[0]/BarisKualitas[0];
         }
     }
     document.getElementById("nilaiSlider3").innerHTML=nilai.toString();
@@ -290,86 +291,86 @@ function prosesSlider3(value){
 function prosesSlider4(value){
     var nilai;
     var stringPerbandingan;
-    el1="Penghargaan ";
-    el2="Popularitas Penulis ";
+    el1="Ketersediaan ";
+    el2="Ketepatan Pengiriman ";
     if(value==8){
         nilai=1;
         stringPerbandingan=el1+iK1+"dengan "+el2;
-        barisPenghargaan[2]=1;
-        barisPopularitas[1]=1;
+        BarisKetersediaan[2]=1;
+        BarisKetepatanPengiriman[1]=1;
     }else{
         if(value<8){
-            //lebih mementingkan Penghargaan
+            //lebih mementingkan Ketersediaan
         nilai=9-value;
         if(nilai==2){
             stringPerbandingan=el1+iK2+"daripada "+el2;
-            barisPenghargaan[2]=2;            
+            BarisKetersediaan[2]=2;            
         }
             if(nilai==3){
-                barisPenghargaan[2]=3;
+                BarisKetersediaan[2]=3;
             stringPerbandingan=el1+iK3+"daripada "+el2;
         }
             if(nilai==4){
-                barisPenghargaan[2]=4;
+                BarisKetersediaan[2]=4;
             stringPerbandingan=el1+iK4+"daripada "+el2;
         }
             if(nilai==5){
-                barisPenghargaan[2]=5;
+                BarisKetersediaan[2]=5;
             stringPerbandingan=el1+iK5+"daripada "+el2;
         }
             if(nilai==6){
-                barisPenghargaan[2]=6;
+                BarisKetersediaan[2]=6;
             stringPerbandingan=el1+iK6+"daripada "+el2;
         }
             if(nilai==7){
-                barisPenghargaan[2]=7;
+                BarisKetersediaan[2]=7;
             stringPerbandingan=el1+iK7+"daripada "+el2;
         }
             if(nilai==8){
-                barisPenghargaan[2]=8;
+                BarisKetersediaan[2]=8;
             stringPerbandingan=el1+iK8+"daripada "+el2;
         }
             if(nilai==9){
-                barisPenghargaan[2]=9;
+                BarisKetersediaan[2]=9;
             stringPerbandingan=el1+iK9+"daripada "+el2;
         }
-        barisPopularitas[1]=barisPenghargaan[1]/barisPenghargaan[2];
+        BarisKetepatanPengiriman[1]=BarisKetersediaan[1]/BarisKetersediaan[2];
         }else{
-            //lebih mementingkan popularitas penulis
+            //lebih mementingkan Ketepatan Pengiriman
         nilai=value-7;
             if(nilai==2){
-            barisPopularitas[1]=2;
+            BarisKetepatanPengiriman[1]=2;
             stringPerbandingan=el2+iK2+"daripada "+el1;                
         }
             if(nilai==3){
-                barisPopularitas[1]=3;
+                BarisKetepatanPengiriman[1]=3;
             stringPerbandingan=el2+iK3+"daripada "+el1;
         }
             if(nilai==4){
-                barisPopularitas[1]=4;
+                BarisKetepatanPengiriman[1]=4;
             stringPerbandingan=el2+iK4+"daripada "+el1;
         }
             if(nilai==5){
-                barisPopularitas[1]=5;
+                BarisKetepatanPengiriman[1]=5;
             stringPerbandingan=el2+iK5+"daripada "+el1;
         }
             if(nilai==6){
-                barisPopularitas[1]=6;
+                BarisKetepatanPengiriman[1]=6;
             stringPerbandingan=el2+iK6+"daripada "+el1;
         }
             if(nilai==7){
-                barisPopularitas[1]=7;
+                BarisKetepatanPengiriman[1]=7;
             stringPerbandingan=el2+iK7+"daripada "+el1;
         }
             if(nilai==8){
-                barisPopularitas[1]=8;
+                BarisKetepatanPengiriman[1]=8;
             stringPerbandingan=el2+iK8+"daripada "+el1;
         }
             if(nilai==9){
-                barisPopularitas[1]=9;
+                BarisKetepatanPengiriman[1]=9;
             stringPerbandingan=el2+iK9+"daripada "+el1;
         }
-      barisPenghargaan[2]=barisPopularitas[2]/barisPopularitas[1];
+      BarisKetersediaan[2]=BarisKetepatanPengiriman[2]/BarisKetepatanPengiriman[1];
         }
     }
     document.getElementById("nilaiSlider4").innerHTML=nilai.toString();
@@ -380,86 +381,86 @@ function prosesSlider4(value){
 function prosesSlider5(value){
     var nilai;
     var stringPerbandingan;
-    el1="Penghargaan ";
-    el2="Rating Penulis ";
+    el1="Ketersediaan ";
+    el2="Kualitas ";
     if(value==8){
         nilai=1;
         stringPerbandingan=el1+iK1+"dengan "+el2;
-        barisPenghargaan[3]=1;
-        barisRatingPenulis[1]=1;
+        BarisKetersediaan[3]=1;
+        BarisKualitas[1]=1;
     }else{
         if(value<8){
-            //lebih mementingkan Penghargaan
+            //lebih mementingkan Ketersediaan
         nilai=9-value;
         if(nilai==2){
             stringPerbandingan=el1+iK2+"daripada "+el2;
-            barisPenghargaan[3]=2;            
+            BarisKetersediaan[3]=2;            
         }
             if(nilai==3){
-                barisPenghargaan[3]=3;
+                BarisKetersediaan[3]=3;
             stringPerbandingan=el1+iK3+"daripada "+el2;
         }
             if(nilai==4){
-                barisPenghargaan[3]=4;
+                BarisKetersediaan[3]=4;
             stringPerbandingan=el1+iK4+"daripada "+el2;
         }
             if(nilai==5){
-                barisPenghargaan[3]=5;
+                BarisKetersediaan[3]=5;
             stringPerbandingan=el1+iK5+"daripada "+el2;
         }
             if(nilai==6){
-                barisPenghargaan[3]=6;
+                BarisKetersediaan[3]=6;
             stringPerbandingan=el1+iK6+"daripada "+el2;
         }
             if(nilai==7){
-                barisPenghargaan[3]=7;
+                BarisKetersediaan[3]=7;
             stringPerbandingan=el1+iK7+"daripada "+el2;
         }
             if(nilai==8){
-                barisPenghargaan[3]=8;
+                BarisKetersediaan[3]=8;
             stringPerbandingan=el1+iK8+"daripada "+el2;
         }
             if(nilai==9){
-                barisPenghargaan[3]=9;
+                BarisKetersediaan[3]=9;
             stringPerbandingan=el1+iK9+"daripada "+el2;
         }
-        barisRatingPenulis[1]=barisPenghargaan[1]/barisPenghargaan[3];
+        BarisKualitas[1]=BarisKetersediaan[1]/BarisKetersediaan[3];
         }else{
-            //lebih mementingkan rating penulis
+            //lebih mementingkan Kualitas
         nilai=value-7;
             if(nilai==2){
-            barisRatingPenulis[1]=2;
+            BarisKualitas[1]=2;
             stringPerbandingan=el2+iK2+"daripada "+el1;                
         }
             if(nilai==3){
-                barisRatingPenulis[1]=3;
+                BarisKualitas[1]=3;
             stringPerbandingan=el2+iK3+"daripada "+el1;
         }
             if(nilai==4){
-                barisRatingPenulis[1]=4;
+                BarisKualitas[1]=4;
             stringPerbandingan=el2+iK4+"daripada "+el1;
         }
             if(nilai==5){
-                barisRatingPenulis[1]=5;
+                BarisKualitas[1]=5;
             stringPerbandingan=el2+iK5+"daripada "+el1;
         }
             if(nilai==6){
-                barisRatingPenulis[1]=6;
+                BarisKualitas[1]=6;
             stringPerbandingan=el2+iK6+"daripada "+el1;
         }
             if(nilai==7){
-                barisRatingPenulis[1]=7;
+                BarisKualitas[1]=7;
             stringPerbandingan=el2+iK7+"daripada "+el1;
         }
             if(nilai==8){
-                barisRatingPenulis[1]=8;
+                BarisKualitas[1]=8;
             stringPerbandingan=el2+iK8+"daripada "+el1;
         }
             if(nilai==9){
-                barisRatingPenulis[1]=9;
+                BarisKualitas[1]=9;
             stringPerbandingan=el2+iK9+"daripada "+el1;
         }
-      barisPenghargaan[3]=barisRatingPenulis[2]/barisRatingPenulis[1];
+      BarisKetersediaan[3]=BarisKualitas[2]/BarisKualitas[1];
         }
     }
     document.getElementById("nilaiSlider5").innerHTML=nilai.toString();
@@ -470,86 +471,86 @@ function prosesSlider5(value){
 function prosesSlider6(value){
     var nilai;
     var stringPerbandingan;
-    el1="Popularitas Penulis ";
-    el2="Rating Penulis ";
+    el1="Ketepatan Pengiriman ";
+    el2="Kualitas ";
     if(value==8){
         nilai=1;
         stringPerbandingan=el1+iK1+"dengan "+el2;
-        barisPopularitas[3]=1;
-        barisRatingPenulis[2]=1;
+        BarisKetepatanPengiriman[3]=1;
+        BarisKualitas[2]=1;
     }else{
         if(value<8){
-            //lebih mementingkan popularitas penulis
+            //lebih mementingkan Ketepatan Pengiriman
         nilai=9-value;
         if(nilai==2){
             stringPerbandingan=el1+iK2+"daripada "+el2;
-            barisPopularitas[3]=2;            
+            BarisKetepatanPengiriman[3]=2;            
         }
             if(nilai==3){
-                barisPopularitas[3]=3;
+                BarisKetepatanPengiriman[3]=3;
             stringPerbandingan=el1+iK3+"daripada "+el2;
         }
             if(nilai==4){
-                barisPopularitas[3]=4;
+                BarisKetepatanPengiriman[3]=4;
             stringPerbandingan=el1+iK4+"daripada "+el2;
         }
             if(nilai==5){
-                barisPopularitas[3]=5;
+                BarisKetepatanPengiriman[3]=5;
             stringPerbandingan=el1+iK5+"daripada "+el2;
         }
             if(nilai==6){
-                barisPopularitas[3]=6;
+                BarisKetepatanPengiriman[3]=6;
             stringPerbandingan=el1+iK6+"daripada "+el2;
         }
             if(nilai==7){
-                barisPopularitas[3]=7;
+                BarisKetepatanPengiriman[3]=7;
             stringPerbandingan=el1+iK7+"daripada "+el2;
         }
             if(nilai==8){
-                barisPopularitas[3]=8;
+                BarisKetepatanPengiriman[3]=8;
             stringPerbandingan=el1+iK8+"daripada "+el2;
         }
             if(nilai==9){
-                barisPopularitas[3]=9;
+                BarisKetepatanPengiriman[3]=9;
             stringPerbandingan=el1+iK9+"daripada "+el2;
         }
-        barisRatingPenulis[2]=barisPopularitas[2]/barisPopularitas[3];
+        BarisKualitas[2]=BarisKetepatanPengiriman[2]/BarisKetepatanPengiriman[3];
         }else{
-            //lebih mementingkan rating penulis
+            //lebih mementingkan Kualitas
         nilai=value-7;
             if(nilai==2){
-            barisRatingPenulis[2]=2;
+            BarisKualitas[2]=2;
             stringPerbandingan=el2+iK2+"daripada "+el1;                
         }
             if(nilai==3){
-                barisRatingPenulis[2]=3;
+                BarisKualitas[2]=3;
             stringPerbandingan=el2+iK3+"daripada "+el1;
         }
             if(nilai==4){
-                barisRatingPenulis[2]=4;
+                BarisKualitas[2]=4;
             stringPerbandingan=el2+iK4+"daripada "+el1;
         }
             if(nilai==5){
-                barisRatingPenulis[2]=5;
+                BarisKualitas[2]=5;
             stringPerbandingan=el2+iK5+"daripada "+el1;
         }
             if(nilai==6){
-                barisRatingPenulis[2]=6;
+                BarisKualitas[2]=6;
             stringPerbandingan=el2+iK6+"daripada "+el1;
         }
             if(nilai==7){
-                barisRatingPenulis[2]=7;
+                BarisKualitas[2]=7;
             stringPerbandingan=el2+iK7+"daripada "+el1;
         }
             if(nilai==8){
-                barisRatingPenulis[2]=8;
+                BarisKualitas[2]=8;
             stringPerbandingan=el2+iK8+"daripada "+el1;
         }
             if(nilai==9){
-                barisRatingPenulis[2]=9;
+                BarisKualitas[2]=9;
             stringPerbandingan=el2+iK9+"daripada "+el1;
         }
-      barisPopularitas[3]=barisRatingPenulis[3]/barisRatingPenulis[2];
+      BarisKetepatanPengiriman[3]=BarisKualitas[3]/BarisKualitas[2];
         }
     }
     document.getElementById("nilaiSlider6").innerHTML=nilai.toString();
@@ -561,10 +562,10 @@ function printMatriks(){
     for(var i=0;i<4;i++){
        var index=i+1;
 
-       document.getElementById("barisRatingNovel"+(i+1)).innerHTML=barisRatingNovel[i];
-document.getElementById("barisPenghargaan"+(i+1)).innerHTML=barisPenghargaan[i];
-       document.getElementById("barisPopularitasPenulis"+(i+1)).innerHTML=barisPopularitas[i];
-       document.getElementById("barisRatingPenulis"+(i+1)).innerHTML=barisRatingPenulis[i];
+       document.getElementById("BarisHarga"+(i+1)).innerHTML=BarisHarga[i];
+document.getElementById("BarisKetersediaan"+(i+1)).innerHTML=BarisKetersediaan[i];
+       document.getElementById("BarisKetepatanPengirimanPenulis"+(i+1)).innerHTML=BarisKetepatanPengiriman[i];
+       document.getElementById("BarisKualitas"+(i+1)).innerHTML=BarisKualitas[i];
    }
     menjumlahKolom();
 }
@@ -573,7 +574,7 @@ function menjumlahKolom(){
     //menghitung jumlah tiap kolom
 var jumlahTiapKolom=new Array(1,1,1,1);
        for(var i=0;i<4;i++){
-jumlahTiapKolom[i]=barisRatingNovel[i]+barisPenghargaan[i]+barisPopularitas[i]+barisRatingPenulis[i];
+jumlahTiapKolom[i]=BarisHarga[i]+BarisKetersediaan[i]+BarisKetepatanPengiriman[i]+BarisKualitas[i];
        }
     document.getElementById("jumlahKolom1").innerHTML=jumlahTiapKolom[0];
     document.getElementById("jumlahKolom2").innerHTML=jumlahTiapKolom[1];
@@ -583,73 +584,73 @@ jumlahTiapKolom[i]=barisRatingNovel[i]+barisPenghargaan[i]+barisPopularitas[i]+b
 }
 
 function menormalisasiMatriksInput(jumlahTiapKolom){
-var normBarisRatingNovel=new Array(1,1,1,1);
-var normBarisPenghargaan=new Array(1,1,1,1);
-var normBarisPopularitas=new Array(1,1,1,1);
-var normBarisRatingPenulis=new Array(1,1,1,1);
+var normBarisHarga=new Array(1,1,1,1);
+var normBarisKetersediaan=new Array(1,1,1,1);
+var normBarisKetepatanPengiriman=new Array(1,1,1,1);
+var normBarisKualitas=new Array(1,1,1,1);
     
     for(var i=0;i<4;i++){
-normBarisRatingNovel[i]=barisRatingNovel[i]/jumlahTiapKolom[i];
-document.getElementById("barisNormRatingNovel"+(i+1)).innerHTML=normBarisRatingNovel[i];
-normBarisPenghargaan[i]=barisPenghargaan[i]/jumlahTiapKolom[i];
-document.getElementById("barisNormPenghargaan"+(i+1)).innerHTML=normBarisPenghargaan[i];   
-normBarisPopularitas[i]=barisPopularitas[i]/jumlahTiapKolom[i];
-document.getElementById("barisNormPopularitas"+(i+1)).innerHTML=normBarisPopularitas[i];
-normBarisRatingPenulis[i]=barisRatingPenulis[i]/jumlahTiapKolom[i];
-document.getElementById("barisNormRatingPenulis"+(i+1)).innerHTML=normBarisRatingPenulis[i];
+normBarisHarga[i]=BarisHarga[i]/jumlahTiapKolom[i];
+document.getElementById("barisNormHarga"+(i+1)).innerHTML=normBarisHarga[i];
+normBarisKetersediaan[i]=BarisKetersediaan[i]/jumlahTiapKolom[i];
+document.getElementById("barisNormKetersediaan"+(i+1)).innerHTML=normBarisKetersediaan[i];   
+normBarisKetepatanPengiriman[i]=BarisKetepatanPengiriman[i]/jumlahTiapKolom[i];
+document.getElementById("barisNormKetepatanPengiriman"+(i+1)).innerHTML=normBarisKetepatanPengiriman[i];
+normBarisKualitas[i]=BarisKualitas[i]/jumlahTiapKolom[i];
+document.getElementById("barisNormKualitas"+(i+1)).innerHTML=normBarisKualitas[i];
     }
     
-menjumlahBarisNorm(normBarisRatingNovel,normBarisPenghargaan,normBarisPopularitas,normBarisRatingPenulis);
+menjumlahBarisNorm(normBarisHarga,normBarisKetersediaan,normBarisKetepatanPengiriman,normBarisKualitas);
 }
 
-function menjumlahBarisNorm(normBarisRatingNovel,normBarisPenghargaan,normBarisPopularitas,normBarisRatingPenulis){
+function menjumlahBarisNorm(normBarisHarga,normBarisKetersediaan,normBarisKetepatanPengiriman,normBarisKualitas){
     var jumlahTiapBaris=new Array(1,1,1,1);
-    jumlahTiapBaris[0]=normBarisRatingNovel.reduce(totalSum);
-    jumlahTiapBaris[1]=normBarisPenghargaan.reduce(totalSum);
-    jumlahTiapBaris[2]=normBarisPopularitas.reduce(totalSum);
-    jumlahTiapBaris[3]=normBarisRatingPenulis.reduce(totalSum);
- document.getElementById("barisNormRatingNovel5").innerHTML=jumlahTiapBaris[0];
-document.getElementById("barisNormPenghargaan5").innerHTML=jumlahTiapBaris[1];
-    document.getElementById("barisNormPopularitas5").innerHTML=jumlahTiapBaris[2];
-    document.getElementById("barisNormRatingPenulis5").innerHTML=jumlahTiapBaris[3];
+    jumlahTiapBaris[0]=normBarisHarga.reduce(totalSum);
+    jumlahTiapBaris[1]=normBarisKetersediaan.reduce(totalSum);
+    jumlahTiapBaris[2]=normBarisKetepatanPengiriman.reduce(totalSum);
+    jumlahTiapBaris[3]=normBarisKualitas.reduce(totalSum);
+ document.getElementById("barisNormHarga5").innerHTML=jumlahTiapBaris[0];
+document.getElementById("barisNormKetersediaan5").innerHTML=jumlahTiapBaris[1];
+    document.getElementById("barisNormKetepatanPengiriman5").innerHTML=jumlahTiapBaris[2];
+    document.getElementById("barisNormKualitas5").innerHTML=jumlahTiapBaris[3];
     menghitungPrioritasRelatifKriteria(jumlahTiapBaris);
 }
 
 function menghitungPrioritasRelatifKriteria(jumlahTiapBaris){
     for(var i=0;i<4;i++){
     prioritasRelatifKriteria[i]=jumlahTiapBaris[i]/4;}
-document.getElementById("barisNormRatingNovel6").innerHTML=prioritasRelatifKriteria[0];    document.getElementById("barisNormPenghargaan6").innerHTML=prioritasRelatifKriteria[1];    document.getElementById("barisNormPopularitas6").innerHTML=prioritasRelatifKriteria[2];    document.getElementById("barisNormRatingPenulis6").innerHTML=prioritasRelatifKriteria[3];
+document.getElementById("barisNormHarga6").innerHTML=prioritasRelatifKriteria[0];    document.getElementById("barisNormKetersediaan6").innerHTML=prioritasRelatifKriteria[1];    document.getElementById("barisNormKetepatanPengiriman6").innerHTML=prioritasRelatifKriteria[2];    document.getElementById("barisNormKualitas6").innerHTML=prioritasRelatifKriteria[3];
     mengukurKonsistensi();
 }
 
 function mengukurKonsistensi(){
-var konsBarisRatingNovel=new Array(1,1,1,1);
-var konsBarisPenghargaan=new Array(1,1,1,1);
-var konsBarisPopularitas=new Array(1,1,1,1);
-var konsBarisRatingPenulis=new Array(1,1,1,1);
+var konsBarisHarga=new Array(1,1,1,1);
+var konsBarisKetersediaan=new Array(1,1,1,1);
+var konsBarisKetepatanPengiriman=new Array(1,1,1,1);
+var konsBarisKualitas=new Array(1,1,1,1);
     for(var i=0;i<4;i++){
-        konsBarisRatingNovel[i]=barisRatingNovel[i]*prioritasRelatifKriteria[i];
-        document.getElementById("barisKonsRatingNovel"+(i+1)).innerHTML=konsBarisRatingNovel[i];
-        konsBarisPenghargaan[i]=barisPenghargaan[i]*prioritasRelatifKriteria[i];
-        document.getElementById("barisKonsPenghargaan"+(i+1)).innerHTML=konsBarisPenghargaan[i];
-        konsBarisPopularitas[i]=barisPopularitas[i]*prioritasRelatifKriteria[i];
-        document.getElementById("barisKonsPopularitas"+(i+1)).innerHTML=konsBarisPopularitas[i];
-        konsBarisRatingPenulis[i]=barisRatingPenulis[i]*prioritasRelatifKriteria[i];
-        document.getElementById("barisKonsRatingPenulis"+(i+1)).innerHTML=konsBarisRatingPenulis[i];
+        konsBarisHarga[i]=BarisHarga[i]*prioritasRelatifKriteria[i];
+        document.getElementById("barisKonsHarga"+(i+1)).innerHTML=konsBarisHarga[i];
+        konsBarisKetersediaan[i]=BarisKetersediaan[i]*prioritasRelatifKriteria[i];
+        document.getElementById("barisKonsKetersediaan"+(i+1)).innerHTML=konsBarisKetersediaan[i];
+        konsBarisKetepatanPengiriman[i]=BarisKetepatanPengiriman[i]*prioritasRelatifKriteria[i];
+        document.getElementById("barisKonsKetepatanPengiriman"+(i+1)).innerHTML=konsBarisKetepatanPengiriman[i];
+        konsBarisKualitas[i]=BarisKualitas[i]*prioritasRelatifKriteria[i];
+        document.getElementById("barisKonsKualitas"+(i+1)).innerHTML=konsBarisKualitas[i];
     }
- menjumlahBarisKons(konsBarisRatingNovel,konsBarisPenghargaan,konsBarisPopularitas,konsBarisRatingPenulis);
+ menjumlahBarisKons(konsBarisHarga,konsBarisKetersediaan,konsBarisKetepatanPengiriman,konsBarisKualitas);
 }
 
-function menjumlahBarisKons(konsBarisRatingNovel,konsBarisPenghargaan,konsBarisPopularitas,konsBarisRatingPenulis){
+function menjumlahBarisKons(konsBarisHarga,konsBarisKetersediaan,konsBarisKetepatanPengiriman,konsBarisKualitas){
     var jumlahTiapBaris=new Array(1,1,1,1);
-    jumlahTiapBaris[0]=konsBarisRatingNovel.reduce(totalSum);
-    jumlahTiapBaris[1]=konsBarisPenghargaan.reduce(totalSum);
-    jumlahTiapBaris[2]=konsBarisPopularitas.reduce(totalSum);
-    jumlahTiapBaris[3]=konsBarisRatingPenulis.reduce(totalSum);
- document.getElementById("barisKonsRatingNovel5").innerHTML=jumlahTiapBaris[0];
-document.getElementById("barisKonsPenghargaan5").innerHTML=jumlahTiapBaris[1];
-    document.getElementById("barisKonsPopularitas5").innerHTML=jumlahTiapBaris[2];
-    document.getElementById("barisKonsRatingPenulis5").innerHTML=jumlahTiapBaris[3];
+    jumlahTiapBaris[0]=konsBarisHarga.reduce(totalSum);
+    jumlahTiapBaris[1]=konsBarisKetersediaan.reduce(totalSum);
+    jumlahTiapBaris[2]=konsBarisKetepatanPengiriman.reduce(totalSum);
+    jumlahTiapBaris[3]=konsBarisKualitas.reduce(totalSum);
+ document.getElementById("barisKonsHarga5").innerHTML=jumlahTiapBaris[0];
+document.getElementById("barisKonsKetersediaan5").innerHTML=jumlahTiapBaris[1];
+    document.getElementById("barisKonsKetepatanPengiriman5").innerHTML=jumlahTiapBaris[2];
+    document.getElementById("barisKonsKualitas5").innerHTML=jumlahTiapBaris[3];
     sumRelatifKriteria(jumlahTiapBaris);
 }
 function sumRelatifKriteria(jumlahTiapBaris){
@@ -657,10 +658,10 @@ function sumRelatifKriteria(jumlahTiapBaris){
     for(var i=0;i<4;i++){
         totalRelatifKriteria[i]=jumlahTiapBaris[i]/prioritasRelatifKriteria[i];
     }
-    document.getElementById("barisKonsRatingNovel6").innerHTML=totalRelatifKriteria[0];
-    document.getElementById("barisKonsPenghargaan6").innerHTML=totalRelatifKriteria[1];
-    document.getElementById("barisKonsPopularitas6").innerHTML=totalRelatifKriteria[2];
-    document.getElementById("barisKonsRatingPenulis6").innerHTML=totalRelatifKriteria[3];
+    document.getElementById("barisKonsHarga6").innerHTML=totalRelatifKriteria[0];
+    document.getElementById("barisKonsKetersediaan6").innerHTML=totalRelatifKriteria[1];
+    document.getElementById("barisKonsKetepatanPengiriman6").innerHTML=totalRelatifKriteria[2];
+    document.getElementById("barisKonsKualitas6").innerHTML=totalRelatifKriteria[3];
     menghitungLamdaMaks(totalRelatifKriteria);
 }
 
@@ -677,6 +678,7 @@ function menghitungConsistencyIndex(lamdaMaks){
 }
 function menghitungCr(ci,n){
     var ri;
+    n=n-1;
     if(n==1){ri=0.00;}
     if(n==2){ri=0.00;}
     if(n==3){ri=0.58;}
